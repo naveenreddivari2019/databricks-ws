@@ -1,0 +1,54 @@
+{
+  "name": "workflow-test1",
+  "email_notifications": {
+    "on_start": [
+      "Naveen_Kumar_Reddy_Reddivari@epam.com"
+    ],
+    "on_success": [
+      "Naveen_Kumar_Reddy_Reddivari@epam.com"
+    ],
+    "on_failure": [
+      "Naveen_Kumar_Reddy_Reddivari@epam.com"
+    ],
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "notification_settings": {
+    "no_alert_for_skipped_runs": false,
+    "no_alert_for_canceled_runs": false
+  },
+  "timeout_seconds": 0,
+  "schedule": {
+    "quartz_cron_expression": "36 13 18 * * ?",
+    "timezone_id": "Asia/Calcutta",
+    "pause_status": "UNPAUSED"
+  },
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "deltaloadtest1",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/naveen_kumar_reddy_reddivari@epam.com/DeltaLoadTest",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "environment_key": "Default",
+      "disabled": false
+    }
+  ],
+  "queue": {
+    "enabled": true
+  },
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "environment_version": "5"
+      }
+    }
+  ],
+  "performance_target": "PERFORMANCE_OPTIMIZED"
+}
